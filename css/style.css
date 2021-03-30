@@ -1,0 +1,195 @@
+.navbar-top-height{
+  height: 56px;
+}
+
+
+#cssmenu {padding: 0; margin: 0; border: 0; width:100%}
+#cssmenu ul, #cssmenu li {list-style: none; margin: 0; padding: 0;}
+#cssmenu ul {position: relative; z-index: 597; }
+#cssmenu ul li { float: left; min-height: 1px; vertical-align: middle;}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {position: relative; z-index: 599; cursor: default;}
+#cssmenu ul ul {visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 100%;}
+#cssmenu ul ul li {float: none;}
+#cssmenu ul ul ul {top: 0; left: auto; right: -99.5%; }
+#cssmenu ul li:hover > ul { visibility: visible;}
+#cssmenu ul ul {bottom: 0; left: 0;}
+#cssmenu ul ul {margin-top: 0; }
+#cssmenu ul ul li {font-weight: normal;}
+#cssmenu a { display: block; line-height: 1em; text-decoration: none; }
+
+#cssmenu {
+  font-size: 12px; 
+}
+
+  #cssmenu > ul { *display: inline-block; }
+
+  #cssmenu:after, #cssmenu ul:after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+
+#cssmenu a {
+    color: #CBCBCB;
+    padding: 0 20px; 
+}
+#cssmenu ul { text-transform: uppercase; }
+
+    #cssmenu ul ul {
+      text-transform: none;
+      min-width: 120px; 
+}
+      #cssmenu ul ul a {
+        background: #343a40;
+        color: #FFF;
+        line-height: 150%;
+        padding: 16px 20px; 
+}
+      #cssmenu ul ul ul { border-top: 0 none; }
+
+      #cssmenu ul ul li { position: relative }
+
+#cssmenu > ul > li > a { line-height: 48px;  }
+
+        #cssmenu ul ul li:hover > a { background: #343a40; }
+
+        #cssmenu ul ul li:last-child:hover > a { border-radius: 0 0 0 3px; }
+
+        #cssmenu ul ul li.has-sub > a:after {
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          margin-top: -8px;
+}
+
+ #cssmenu ul li:hover > a, #cssmenu ul li.active > a {
+
+      color: #FFF;
+}
+    #cssmenu ul li.has-sub > a:after {
+      margin-left: 5px; 
+}
+    #cssmenu ul li.last ul {
+      left: auto;
+      right: 0; 
+}
+      #cssmenu ul li.last ul ul {
+        left: auto;
+        right: 99.5%;
+}
+
+.right-drbt1{
+  margin-left: 50px!important;
+  min-width: 120px; 
+}
+
+.right-drbt2{
+  margin-left: 100px!important;
+  min-width: 130px; 
+}
+
+
+    /* свойства модального окна по умолчанию */
+    .modal1 {
+      position: fixed;
+      /* фиксированное положение */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      /* цвет фона */
+      z-index: 1050;
+      opacity: 0;
+      /* по умолчанию модальное окно прозрачно */
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      /* анимация перехода */
+      pointer-events: none;
+      /* элемент невидим для событий мыши */
+    }
+
+    /* при отображении модального окно */
+    .modal1:target {
+      opacity: 1;
+      pointer-events: auto;
+      overflow-y: auto;
+    }
+
+    /* свойства для кнопки "Закрыть" */
+    .close {
+      float: right;
+      font-family: sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      opacity: .5;
+      text-decoration: none;
+    }
+
+    /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+    .close:focus,
+    .close:hover {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .75;
+    }
+
+.borded-block{
+  border-left: #343a40 2px solid ;
+  border-right: #343a40 2px solid ;
+  border-bottom: #343a40 2px solid ;
+}
+
+.padding-block{
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.ssulka{
+  color: #000;
+  text-decoration: none;
+}
+
+.ssulka:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+
+.drop{
+  border:solid;
+  transition:100ms;
+}
+
+.dragging {
+  opacity:0.5;
+}
+
+.over {
+  border: solid #343a40;
+}
+
+@media (max-width: 540px) {
+  .padding-block{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 540px) {
+  .modal1{
+    max-width: 400px!important;
+  }
+}
+
+@media (max-width: 375px) {
+  .modal1{
+    max-width: 375px!important;
+  }
+}
